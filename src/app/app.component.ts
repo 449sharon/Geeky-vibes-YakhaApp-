@@ -1,4 +1,5 @@
-import { AccountSetupPage } from './../pages/account-setup/account-setup';
+import { BuilderInfoPage } from './../pages/builder-info/builder-info';
+
 
 
 
@@ -16,7 +17,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = BuilderInfoPage;
 
   pages: Array<{title: string, component: any}>;
 

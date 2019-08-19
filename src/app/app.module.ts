@@ -1,3 +1,4 @@
+import { BuilderInfoPage } from './../pages/builder-info/builder-info';
 import { AccountSetupPage } from './../pages/account-setup/account-setup';
 import { RegisterPage } from './../pages/register/register';
 import { OnboardingPage } from './../pages/onboarding/onboarding';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     RegisterPage,
     OnboardingPage,
-    AccountSetupPage
+    AccountSetupPage,
+    BuilderInfoPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     RegisterPage,
     OnboardingPage,
-    AccountSetupPage
+    AccountSetupPage,
+    BuilderInfoPage
   ],
   providers: [
     StatusBar,
