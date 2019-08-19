@@ -14,17 +14,17 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 import { UserProvider } from '../providers/user/user';
-=======
+
 import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
+
+
+
+
 import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
->>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
-=======
-import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
-import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
->>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
+
 
 @NgModule({
   declarations: [

@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { AccountSetupPage } from './../pages/account-setup/account-setup';
-=======
-import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
-=======
-import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
-
-
->>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
-
-
-
-
-
->>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,22 +11,13 @@ import { firebaseConfig } from './app.firebase.config';
 import * as firebase from 'firebase';
 
 
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   rootPage: any = LoginPage;
-=======
-  rootPage: any = ForgotPasswordPage;
->>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
-=======
-  rootPage: any = ForgotPasswordPage;
->>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
 
   pages: Array<{title: string, component: any}>;
 
