@@ -1,3 +1,4 @@
+import { ProfileViewPage } from './../pages/profile-view/profile-view';
 
 import { VersionPage } from './../pages/version/version';
 import { SharePage } from './../pages/share/share';
@@ -28,7 +29,7 @@ import { firebaseConfig } from './app.firebase.config';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = ProfileViewPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -39,7 +40,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'View profile', component: AccountSetupPage },
+      { title: 'View profile', component: ProfileViewPage },
       { title: 'Messages', component: MessagesPage },
       { title: 'Help', component: HelpPage },
       { title: 'Feedback', component: FeedbackPage},
