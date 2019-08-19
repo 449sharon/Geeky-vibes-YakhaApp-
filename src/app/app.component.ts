@@ -1,4 +1,5 @@
-import { BuilderInfoPage } from './../pages/builder-info/builder-info';
+import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
+
 
 
 
@@ -10,7 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -18,7 +19,7 @@ import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = QuotationFormPage;
+  rootPage: any = ForgotPasswordPage;
 
   pages: Array<{title: string, component: any}>;
 

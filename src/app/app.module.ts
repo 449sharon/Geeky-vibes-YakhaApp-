@@ -15,6 +15,7 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
+import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
     OnboardingPage,
     AccountSetupPage,
     BuilderInfoPage,
-    QuotationFormPage
+    QuotationFormPage,
+    ForgotPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
     OnboardingPage,
     AccountSetupPage,
     BuilderInfoPage,
-    QuotationFormPage
+    QuotationFormPage,
+    ForgotPasswordPage
   ],
   providers: [
     StatusBar,
