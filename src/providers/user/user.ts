@@ -11,8 +11,12 @@ import * as firebase from 'firebase';
 */
 @Injectable()
 export class UserProvider {
+  setUser(res: any) {
+    throw new Error("Method not implemented.");
+  }
 
   db = firebase.firestore();
+  auth: any;
   constructor() {}
   
   loginUser(email: string,password: string): Promise<firebase.auth.UserCredential> {
