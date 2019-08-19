@@ -1,3 +1,4 @@
+import { ProfileViewPage } from './../pages/profile-view/profile-view';
 import { VersionPage } from './../pages/version/version';
 import { SharePage } from './../pages/share/share';
 import { FeedbackPage } from './../pages/feedback/feedback';
@@ -44,7 +45,8 @@ import { FormsModule } from '@angular/forms';
     HelpPage,
     FeedbackPage,
     SharePage,
-    VersionPage
+    VersionPage,
+    ProfileViewPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ import { FormsModule } from '@angular/forms';
     HelpPage,
     FeedbackPage,
     SharePage,
-    VersionPage
+    VersionPage,
+    ProfileViewPage
 
 
   ],
@@ -79,4 +82,4 @@ import { FormsModule } from '@angular/forms';
     UserProvider
   ]
 })
-export class AppModule {}  
+export class AppModule {}
