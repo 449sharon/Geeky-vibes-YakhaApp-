@@ -1,4 +1,5 @@
-import { RegisterPage } from './../pages/register/register';
+import { AccountSetupPage } from './../pages/account-setup/account-setup';
+
 
 
 import { Component, ViewChild } from '@angular/core';
@@ -15,7 +16,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = RegisterPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
