@@ -1,4 +1,4 @@
-import { LoginPage } from './../pages/login/login';
+
 import { VersionPage } from './../pages/version/version';
 import { SharePage } from './../pages/share/share';
 import { HelpPage } from './../pages/help/help';
