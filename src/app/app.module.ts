@@ -1,3 +1,4 @@
+import { RegisterPage } from './../pages/register/register';
 import { OnboardingPage } from './../pages/onboarding/onboarding';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     LoginPage,
+    RegisterPage,
     OnboardingPage
   ],
   imports: [
@@ -30,6 +32,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     LoginPage,
+    RegisterPage,
     OnboardingPage
   ],
   providers: [
