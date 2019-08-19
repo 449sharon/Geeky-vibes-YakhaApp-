@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { UserProvider } from '../../providers/user/user';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { AccountSetupPage } from '../account-setup/account-setup';
+import * as firebase from 'firebase';
+
 
 /**
  * Generated class for the RegisterPage page.
@@ -14,12 +19,57 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+  db = firebase.firestore()
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public signupForm: FormGroup;
+  public loading: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private userProvider: UserProvider,
+    private loadingCtrl: LoadingController,
+    private alertCtrl: AlertController,
+    private formBuilder: FormBuilder,) {
+      this.signupForm = this.formBuilder.group({
+        email: ['', Validators.compose([Validators.required, Validators.email])],
+        password: [
+          '',
+          Validators.compose([Validators.minLength(6), Validators.required])
+        ]
+      });
   }
-
+​
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
+   
   }
+  async signupUser(signupForm: FormGroup): Promise<void> {
+    if (!signupForm.valid) {
+      console.log(
+        'Need to complete the form, current value: ',
+        signupForm.value
+      );
+    } else {
+      const email: string = signupForm.value.email;
+      const password: string = signupForm.value.password;
+​
+      this.userProvider.signupUser(email, password).then(
+        () => {
+          this.loading.dismiss().then(() => {
+          this.navCtrl.setRoot(AccountSetupPage)
+          });
+        },
+        error => {
+          this.loading.dismiss().then(async () => {
+            const alert = await this.alertCtrl.create({
+              message: error.message,
+              buttons: [{ text: 'Ok', role: 'cancel' }]
+            });
+            await alert.present();
+          });
+        }
+      );
+      this.loading = await this.loadingCtrl.create();
+      await this.loading.present();
+    }
+  }
+
 
 }

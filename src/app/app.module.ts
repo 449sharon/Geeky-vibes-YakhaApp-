@@ -59,7 +59,7 @@ import { MessagesPage } from '../pages/messages/messages';
     MessagesPage,
     HelpPage,
     SharePage,
-    VersionPage
+    
 
   ],
   providers: [
