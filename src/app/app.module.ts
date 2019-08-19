@@ -1,3 +1,7 @@
+import { VersionPage } from './../pages/version/version';
+import { SharePage } from './../pages/share/share';
+import { FeedbackPage } from './../pages/feedback/feedback';
+import { HelpPage } from './../pages/help/help';
 import { BuilderInfoPage } from './../pages/builder-info/builder-info';
 import { AccountSetupPage } from './../pages/account-setup/account-setup';
 import { RegisterPage } from './../pages/register/register';
@@ -14,17 +18,9 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
-import { UserProvider } from '../providers/user/user';
-
 import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
-
-
-
-
 import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
-
+import { MessagesPage } from '../pages/messages/messages';
 
 @NgModule({
   declarations: [
@@ -37,7 +33,12 @@ import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
     AccountSetupPage,
     BuilderInfoPage,
     QuotationFormPage,
-    ForgotPasswordPage
+    ForgotPasswordPage,
+    MessagesPage,
+    HelpPage,
+    FeedbackPage,
+    SharePage,
+    VersionPage
   ],
   imports: [
     BrowserModule,
@@ -54,13 +55,17 @@ import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
     AccountSetupPage,
     BuilderInfoPage,
     QuotationFormPage,
-    ForgotPasswordPage
+    ForgotPasswordPage,
+    MessagesPage,
+    HelpPage,
+    SharePage,
+    
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UserProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
