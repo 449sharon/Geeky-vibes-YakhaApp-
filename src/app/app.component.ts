@@ -1,13 +1,4 @@
-import { LoginPage } from './../pages/login/login';
-import { VersionPage } from './../pages/version/version';
-import { SharePage } from './../pages/share/share';
-import { HelpPage } from './../pages/help/help';
-import { MessagesPage } from './../pages/messages/messages';
-import { AccountSetupPage } from './../pages/account-setup/account-setup';
-import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
-
-
-
+import { RegisterPage } from './../pages/register/register';
 
 
 import { Component, ViewChild } from '@angular/core';
@@ -17,10 +8,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { FeedbackPage } from '../pages/feedback/feedback';
-import { LoginPage } from '../pages/login/login';
-import * as firebase from 'firebase';
-import { firebaseConfig } from './app.firebase.config';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,25 +15,17 @@ import { firebaseConfig } from './app.firebase.config';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = RegisterPage;
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
-    firebase.initializeApp(firebaseConfig);
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'View profile', component: AccountSetupPage },
-      { title: 'Messages', component: MessagesPage },
-      { title: 'Help', component: HelpPage },
-      { title: 'Feedback', component: FeedbackPage},
-      { title: 'Share', component: SharePage },
-      { title: 'Version', component: VersionPage },
-      { title: 'Signout', component: HomePage }
-   /*    { title: 'List', component: ListPage } */
+      { title: 'List', component: ListPage }
     ];
 
   }

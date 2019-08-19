@@ -9,6 +9,7 @@ import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { UserProvider } from '../../providers/user/user';
 import * as firebase from 'firebase';
+import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 ​
 /**
  * Generated class for the LoginPage page.
@@ -48,9 +49,9 @@ export class LoginPage {
   createAcc(){
 this.navCtrl.push(RegisterPage)
   }
-  // forgotpassword(){
-  //   this.navCtrl.push(ForgotPasswordPage)
-  // }
+  forgotpassword(){
+    this.navCtrl.push(ForgotPasswordPage)
+  }
   loginUser(){
     if (!this.loginForm.valid){
       console.log(this.loginForm.value);

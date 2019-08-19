@@ -25,7 +25,7 @@ export class UserProvider {
 ​
   signupUser(email: string, password: string): Promise<any> {
     return firebase.auth().createUserWithEmailAndPassword(email, password).then((newUserCredential: firebase.auth.UserCredential) => {
-        firebase.firestore().doc(`/SalonProfile/${newUserCredential.user.uid}`).set({ email });
+        firebase.firestore().doc(`/user/${newUserCredential.user.uid}`).set({ email });
       })
       .catch(error => {
         console.error(error);
