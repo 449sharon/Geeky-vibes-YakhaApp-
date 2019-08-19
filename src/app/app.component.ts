@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { VersionPage } from './../pages/version/version';
 import { SharePage } from './../pages/share/share';
 import { HelpPage } from './../pages/help/help';
@@ -25,7 +26,7 @@ import { FeedbackPage } from '../pages/feedback/feedback';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
