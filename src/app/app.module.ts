@@ -22,6 +22,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
 import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
 import { MessagesPage } from '../pages/messages/messages';
+import { UserProvider } from '../providers/user/user';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +48,7 @@ import { MessagesPage } from '../pages/messages/messages';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    FormsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,14 +64,18 @@ import { MessagesPage } from '../pages/messages/messages';
     ForgotPasswordPage,
     MessagesPage,
     HelpPage,
+    FeedbackPage,
     SharePage,
+    VersionPage
     
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HttpClient,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserProvider
   ]
 })
 export class AppModule {}

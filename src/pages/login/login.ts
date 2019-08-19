@@ -23,7 +23,7 @@ import * as firebase from 'firebase';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  db = firebase.firestore()
+  db = firebase.firestore();
   public loginForm: FormGroup;
   loading: Loading;
   constructor(public navCtrl: NavController, public navParams: NavParams,   private formBuilder: FormBuilder,
