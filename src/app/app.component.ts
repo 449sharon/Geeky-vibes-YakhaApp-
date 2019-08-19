@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import { AccountSetupPage } from './../pages/account-setup/account-setup';
+=======
+import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
 
 
 
+
+
+>>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -9,6 +15,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
+import { firebaseConfig } from './app.firebase.config';
+import * as firebase from 'firebase';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -16,12 +26,16 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+<<<<<<< HEAD
+  rootPage: any = LoginPage;
+=======
+  rootPage: any = ForgotPasswordPage;
+>>>>>>> e0555f1644f8485b96c2d079671fd503cd458b08
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+    firebase.initializeApp(firebaseConfig);
 
     // used for an example of ngFor and navigation
     this.pages = [
