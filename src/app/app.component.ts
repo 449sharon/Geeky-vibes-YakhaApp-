@@ -1,3 +1,8 @@
+import { VersionPage } from './../pages/version/version';
+import { SharePage } from './../pages/share/share';
+import { HelpPage } from './../pages/help/help';
+import { MessagesPage } from './../pages/messages/messages';
+import { AccountSetupPage } from './../pages/account-setup/account-setup';
 import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
 
 
@@ -11,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { FeedbackPage } from '../pages/feedback/feedback';
 
 
 @Component({
@@ -19,7 +25,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ForgotPasswordPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -29,7 +35,14 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'View profile', component: AccountSetupPage },
+      { title: 'Messages', component: MessagesPage },
+      { title: 'Help', component: HelpPage },
+      { title: 'Feedback', component: FeedbackPage},
+      { title: 'Share', component: SharePage },
+      { title: 'Version', component: VersionPage },
+      { title: 'Signout', component: HomePage }
+   /*    { title: 'List', component: ListPage } */
     ];
 
   }
