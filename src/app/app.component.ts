@@ -18,6 +18,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FeedbackPage } from '../pages/feedback/feedback';
 import { LoginPage } from '../pages/login/login';
+import * as firebase from 'firebase';
+import { firebaseConfig } from './app.firebase.config';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,6 +33,7 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
+    firebase.initializeApp(firebaseConfig);
 
     // used for an example of ngFor and navigation
     this.pages = [
