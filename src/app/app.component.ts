@@ -29,7 +29,7 @@ import { firebaseConfig } from './app.firebase.config';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ProfileViewPage
+  rootPage: any = HomePage
   ;
 
   pages: Array<{title: string, component: any}>;
