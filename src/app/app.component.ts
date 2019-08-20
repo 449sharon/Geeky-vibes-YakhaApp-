@@ -8,6 +8,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import * as firebase from 'firebase';
+import { firebaseConfig } from './app.firebase.config';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,13 +17,13 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = RegisterPage;
+  rootPage: any;
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
-
+    firebase.initializeApp(firebaseConfig);
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
@@ -32,6 +34,7 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.rootPage = RegisterPage;
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
