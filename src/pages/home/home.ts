@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { GoogleMaps, GoogleMap, Environment } from '@ionic-native/google-maps';
+import { NavController, ToastController } from 'ionic-angular';
+import * as firebase from 'firebase';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
