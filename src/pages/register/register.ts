@@ -53,6 +53,7 @@ export class RegisterPage {
       this.userProvider.signupUser(email, password).then(
         () => {
           this.loading.dismiss().then(() => {
+            
           this.navCtrl.setRoot(AccountSetupPage)
           });
         },

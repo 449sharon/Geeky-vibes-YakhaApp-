@@ -24,7 +24,6 @@ import { QuotationFormPage } from '../pages/quotation-form/quotation-form';
 import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
 import { MessagesPage } from '../pages/messages/messages';
 import { UserProvider } from '../providers/user/user';
-import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 
@@ -70,15 +69,12 @@ import { FormsModule } from '@angular/forms';
     SharePage,
     VersionPage,
     ProfileViewPage
-    
-
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    HttpClient,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UserProvider
+    UserProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

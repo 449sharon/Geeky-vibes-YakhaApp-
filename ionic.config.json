@@ -1,5 +1,7 @@
 {
   "name": "yakhaApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
