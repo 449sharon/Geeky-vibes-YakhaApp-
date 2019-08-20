@@ -39,13 +39,13 @@ export class LoginPage {
       ]
     });
   }
-  
+
 ​
   ionViewDidLoad() {
-   
+
   }
 ​
-  //Create 
+  //Create
   createAcc(){
 this.navCtrl.push(RegisterPage)
   }

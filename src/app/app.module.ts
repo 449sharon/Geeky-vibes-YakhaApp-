@@ -1,3 +1,4 @@
+import { ProfileViewPage } from './../pages/profile-view/profile-view';
 import { VersionPage } from './../pages/version/version';
 import { SharePage } from './../pages/share/share';
 import { FeedbackPage } from './../pages/feedback/feedback';
@@ -10,6 +11,7 @@ import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 
 import { MyApp } from './app.component';
@@ -43,7 +45,8 @@ import { FormsModule } from '@angular/forms';
     HelpPage,
     FeedbackPage,
     SharePage,
-    VersionPage
+    VersionPage,
+    ProfileViewPage
   ],
   imports: [
     BrowserModule,
@@ -66,8 +69,9 @@ import { FormsModule } from '@angular/forms';
     HelpPage,
     FeedbackPage,
     SharePage,
-    VersionPage
-    
+    VersionPage,
+    ProfileViewPage
+
 
   ],
   providers: [

@@ -10,6 +10,12 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import * as firebase from 'firebase';
 import { firebaseConfig } from './app.firebase.config';
+import { ProfileViewPage } from '../pages/profile-view/profile-view';
+import { MessagesPage } from '../pages/messages/messages';
+import { HelpPage } from '../pages/help/help';
+import { FeedbackPage } from '../pages/feedback/feedback';
+import { SharePage } from '../pages/share/share';
+import { VersionPage } from '../pages/version/version';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +23,7 @@ import { firebaseConfig } from './app.firebase.config';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any;
+  rootPage: any = ProfileViewPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -27,14 +33,21 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'View profile', component: ProfileViewPage },
+      { title: 'Messages', component: MessagesPage },
+      { title: 'Help', component: HelpPage },
+      { title: 'Feedback', component: FeedbackPage},
+      { title: 'Share', component: SharePage },
+      { title: 'Version', component: VersionPage },
+      { title: 'Signout', component: HomePage }
+   /*    { title: 'List', component: ListPage } */
     ];
 
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.rootPage = RegisterPage;
+      this.rootPage = HomePage;
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
